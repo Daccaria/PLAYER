@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Seguridad y Gobernanza - PLAYER</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet"/>
+<style>
+    :root {
+        --primary-emerald: #00F5A0;
+        --primary-mint: #00D9F5;
+        --bg-body: #02161E;
+        --bg-surface: #04202B;
+        --bg-card: #082A38;
+        --border-color: #12455A;
+        --border-glow: #00F5A0;
+        --text-main: #E6FFF6;
+        --text-muted: #8AAFB0;
+        --text-accent: #00F5A0;
+        --badge-bg: rgba(0, 245, 160, 0.12);
+        --badge-border: rgba(0, 245, 160, 0.35);
+        --slot-bg: rgba(0, 245, 160, 0.05);
+        --slot-border: rgba(0, 245, 160, 0.3);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter', sans-serif; }
+    body { background: var(--bg-body); color: var(--text-main); }
+    h1, h2, h3, h4 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .navbar { display:flex; justify-content:space-between; align-items:center; padding:1rem 6%; background:var(--bg-surface); border-bottom:1px solid var(--border-color); position:sticky; top:0; z-index:100; }
+    .brand { font-size:1.4rem; font-weight:800; color:var(--text-main); text-decoration:none; display:flex; align-items:center; gap:10px; }
+    .brand-icon { background:linear-gradient(135deg, #00F5A0, #00D9F5); color:#022019; width:36px; height:36px; border-radius:8px; display:inline-flex; align-items:center; justify-content:center; font-weight:900; }
+    .nav-links { display:flex; list-style:none; gap:1.2rem; }
+    .nav-links a { color:var(--text-muted); text-decoration:none; font-weight:600; padding:6px 12px; border-radius:8px; }
+    .nav-links a.active, .nav-links a:hover { color:var(--text-accent); background:var(--badge-bg); }
+    .btn { padding:10px 20px; border-radius:8px; font-weight:700; text-decoration:none; border:none; cursor:pointer; }
+    .btn-cyan { background:linear-gradient(135deg, #00F5A0, #00D9F5); color:#022019; }
+    .btn-outline { border:1.5px solid var(--border-glow); color:var(--text-main); background:transparent; }
+    .container { padding: 4rem 6%; max-width:1200px; margin:0 auto; }
+    .badge { display:inline-block; padding:4px 14px; border-radius:20px; background:var(--badge-bg); border:1px solid var(--badge-border); color:var(--text-accent); font-weight:700; font-size:0.85rem; margin-bottom:1rem; }
+    
+    .security-layout { display:grid; grid-template-columns: 340px 1fr; gap:36px; align-items:center; margin-top:2rem; }
+    .mascota-box { background:var(--bg-card); border:1px solid var(--border-color); border-radius:20px; padding:30px; text-align:center; }
+    .mascota-box img { width:200px; height:200px; object-fit:contain; filter:drop-shadow(0 10px 20px rgba(0,245,160,0.22)); }
+    
+    .roles-grid { display:grid; grid-template-columns: 1fr; gap:20px; }
+    .role-card { background:var(--bg-card); border:1px solid var(--border-color); border-radius:18px; padding:26px; }
+    .role-admin { border-left:4px solid #ef4444; }
+    .role-user { border-left:4px solid var(--border-glow); }
+    
+    .system-slot {
+        background: var(--slot-bg);
+        border: 2px dashed var(--slot-border);
+        border-radius: 16px;
+        padding: 30px;
+        text-align: center;
+        margin: 2.5rem 0;
+    }
+    @media(max-width:900px){ .security-layout { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<nav class="navbar">
+    <a class="brand" href="index.html"><span class="brand-icon">P</span> PLAYER</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="como-usar.html">¿Cómo se usa?</a></li>
+        <li><a href="caracteristicas.html">Características</a></li>
+        <li><a href="precios.html">Precios</a></li>
+        <li><a class="active" href="seguridad.html">Seguridad</a></li>
+    </ul>
+    <div>
+        <a class="btn btn-cyan" href="index.html">Volver al Inicio</a>
+    </div>
+</nav>
+
+<div class="container">
+    <span class="badge">Gobernanza y Privacidad • Página 4</span>
+    <h1 style="font-size:2.8rem; margin-bottom:1rem;">Seguridad y Control de Roles</h1>
+    <p style="color:var(--text-muted); font-size:1.05rem; max-width:700px;">
+        Arquitectura zero-trust con cifrado AES-256 en reposo y tránsito, control estricto de roles (RBAC) y auditoría inmutable.
+    </p>
+
+    <!-- ESPACIO 1: DIAGRAMA DE RED / SEGURIDAD DE FONDO O CONTENIDO -->
+    <div class="system-slot">
+        <span class="badge">🛡️ ESPACIO PARA DIAGRAMA DE INFRAESTRUCTURA Y CERTIFICACIONES</span>
+        <h3>Topología Criptográfica & Registro Forense</h3>
+        <p style="color:var(--text-muted); font-size:0.9rem; max-width:650px; margin:8px auto 14px;">
+            Espacio reservado para insertar el diagrama de red segura, sellos ISO 27001 / SOC 2 Tipo II o captura de la pantalla de asignación de roles.
+        </p>
+        <span style="font-size:0.8rem; color:var(--text-accent); border:1px solid var(--border-glow); padding:4px 12px; border-radius:6px;">
+            [Espacio para imagen técnica o captura de consola de seguridad]
+        </span>
+    </div>
+
+    <div class="security-layout">
+        <!-- MASCOTA 3 PRESERVADA INTACTA -->
+        <div class="mascota-box">
+            <!-- Mascota 3 original intacta -->
+            <img alt="Mascota Red Conectada 3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFe-kR8I1TpUTm-_j2FYre95e5JvEIpgxhPaliiDTRCYOgPTU47-oAAF8X-b-xMRZkx9_K9DuCk0o6PDgZkQZIUmRF3r4Fv_XTlJ6QSNzXKG5PquvGUf4umV2fjsNhAA_cH--UV9lJEuE_oW6P1hlqoAEsrY_d3UdG1htEnO_a1BbrFu6CJpxJE1FUWw8WtYU_hzVMRr5VDnZqM7rQHhjBq3mfQhSgYfJS0Y280V5k2DZrTpolMaKC6Q"/>
+            <h4 style="margin-top:14px;">Centinela de Red</h4>
+            <p style="color:var(--text-muted); font-size:0.85rem; margin-top:6px;">
+                Monitoreo en tiempo real con protocolo TLS 1.3 activo.
+            </p>
+            <div style="margin-top:14px; padding:8px; border:1px dashed var(--slot-border); border-radius:8px; font-size:0.75rem; color:var(--text-muted);">
+                [Espacio para insignia de seguridad o status LED]
+            </div>
+        </div>
+
+        <div class="roles-grid">
+            <div class="role-card role-user">
+                <h4>👤 Perfil Usuario Estándar</h4>
+                <ul style="list-style:none; display:flex; flex-direction:column; gap:8px; margin-top:10px; font-size:0.9rem; color:var(--text-muted);">
+                    <li>✅ Subida y consulta de archivos en carpetas asignadas.</li>
+                    <li>✅ Exploración visual en el grafo interactivo.</li>
+                    <li>❌ Sin acceso a auditorías de IP ni eliminación de bovedas maestras.</li>
+                </ul>
+                <div style="margin-top:12px; padding:6px 10px; border:1px dashed var(--slot-border); font-size:0.78rem; border-radius:6px; color:var(--text-muted);">
+                    📸 [Espacio para captura: Vista restringida del usuario estándar]
+                </div>
+            </div>
+
+            <div class="role-card role-admin">
+                <h4>⚙️ Perfil Administrador Global</h4>
+                <ul style="list-style:none; display:flex; flex-direction:column; gap:8px; margin-top:10px; font-size:0.9rem; color:var(--text-muted);">
+                    <li>✅ Control total CRUD de documentos e historiales.</li>
+                    <li>✅ Gestión de credenciales, roles RBAC y llaves API.</li>
+                    <li>✅ Descargas forenses y copias de seguridad cifradas.</li>
+                </ul>
+                <div style="margin-top:12px; padding:6px 10px; border:1px dashed var(--slot-border); font-size:0.78rem; border-radius:6px; color:var(--text-muted);">
+                    📸 [Espacio para captura: Consola administrativa con métricas de seguridad]
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Características - PLAYER</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet"/>
+<style>
+    :root {
+        --primary-emerald: #00F5A0;
+        --primary-mint: #00D9F5;
+        --bg-body: #02161E;
+        --bg-surface: #04202B;
+        --bg-card: #082A38;
+        --border-color: #12455A;
+        --border-glow: #00F5A0;
+        --text-main: #E6FFF6;
+        --text-muted: #8AAFB0;
+        --text-accent: #00F5A0;
+        --badge-bg: rgba(0, 245, 160, 0.12);
+        --badge-border: rgba(0, 245, 160, 0.35);
+        --accent-glow: rgba(0, 245, 160, 0.3);
+        --slot-bg: rgba(0, 245, 160, 0.05);
+        --slot-border: rgba(0, 245, 160, 0.35);
+    }
+    [data-theme="light"] {
+        --bg-body: #f4fbf7;
+        --bg-surface: #ffffff;
+        --bg-card: #ffffff;
+        --border-color: #cbdad2;
+        --border-glow: #059669;
+        --text-main: #06231d;
+        --text-muted: #3d5e56;
+        --text-accent: #047857;
+        --badge-bg: rgba(5, 150, 105, 0.12);
+        --badge-border: rgba(5, 150, 105, 0.3);
+        --accent-glow: rgba(5, 150, 105, 0.2);
+        --slot-bg: rgba(5, 150, 105, 0.04);
+        --slot-border: rgba(5, 150, 105, 0.25);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter', sans-serif; }
+    body { background: var(--bg-body); color: var(--text-main); }
+    h1, h2, h3, h4 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .navbar { display:flex; justify-content:space-between; align-items:center; padding:1rem 6%; background:var(--bg-surface); border-bottom:1px solid var(--border-color); position:sticky; top:0; z-index:100; }
+    .brand { font-size:1.4rem; font-weight:800; color:var(--text-main); text-decoration:none; display:flex; align-items:center; gap:10px; }
+    .brand-icon { background:linear-gradient(135deg, #00F5A0, #00D9F5); color:#022019; width:36px; height:36px; border-radius:8px; display:inline-flex; align-items:center; justify-content:center; font-weight:900; }
+    .nav-links { display:flex; list-style:none; gap:1.2rem; }
+    .nav-links a { color:var(--text-muted); text-decoration:none; font-weight:600; padding:6px 12px; border-radius:8px; }
+    .nav-links a.active, .nav-links a:hover { color:var(--text-accent); background:var(--badge-bg); }
+    .btn { padding:10px 20px; border-radius:8px; font-weight:700; text-decoration:none; border:none; cursor:pointer; }
+    .btn-cyan { background:linear-gradient(135deg, #00F5A0, #00D9F5); color:#022019; }
+    .btn-outline { border:1.5px solid var(--border-glow); color:var(--text-main); background:transparent; }
+    .container { padding: 4rem 6%; max-width:1200px; margin:0 auto; }
+    .badge { display:inline-block; padding:4px 14px; border-radius:20px; background:var(--badge-bg); border:1px solid var(--badge-border); color:var(--text-accent); font-weight:700; font-size:0.85rem; margin-bottom:1rem; }
+    
+    /* SLOTS DE IMÁGENES DE SISTEMA Y CAPTURAS */
+    .system-banner-slot {
+        background: var(--slot-bg);
+        border: 2px dashed var(--slot-border);
+        border-radius: 18px;
+        padding: 40px 20px;
+        text-align: center;
+        margin: 2rem 0 3rem;
+        background-size: cover;
+        background-position: center;
+    }
+    .grid-features { display:grid; grid-template-columns: 1fr 340px; gap:30px; margin-top:2rem; }
+    .cards-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:20px; }
+    .card { background:var(--bg-card); border:1px solid var(--border-color); border-radius:16px; padding:24px; position:relative; overflow:hidden; }
+    .mascota-card { background:var(--bg-card); border:1px solid var(--border-color); border-radius:20px; padding:26px; text-align:center; }
+    .mascota-card img { width:180px; height:180px; object-fit:contain; filter:drop-shadow(0 10px 20px rgba(0,245,160,0.25)); }
+    .system-mini-slot {
+        margin-top: 14px;
+        padding: 10px;
+        border: 1px dashed var(--slot-border);
+        border-radius: 8px;
+        background: var(--slot-bg);
+        font-size: 0.78rem;
+        color: var(--text-muted);
+    }
+    @media(max-width:900px){ .grid-features { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<nav class="navbar">
+    <a class="brand" href="index.html"><span class="brand-icon">P</span> PLAYER</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="como-usar.html">¿Cómo se usa?</a></li>
+        <li><a class="active" href="caracteristicas.html">Características</a></li>
+        <li><a href="precios.html">Precios</a></li>
+        <li><a href="seguridad.html">Seguridad</a></li>
+    </ul>
+    <div>
+        <a class="btn btn-cyan" href="precios.html">Ver Planes</a>
+    </div>
+</nav>
+
+<div class="container">
+    <span class="badge">Módulo Dedicado • Página 2</span>
+    <h1 style="font-size:2.8rem; margin-bottom:1rem;">Características del Sistema PLAYER</h1>
+    <p style="color:var(--text-muted); max-width:700px; font-size:1.1rem;">
+        Potencia, escalabilidad y procesamiento documental asistido por visión neuronal y análisis de relaciones semánticas.
+    </p>
+
+    <!-- ESPACIO 1: BANNER DE FONDO / CAPTURA DE ARQUITECTURA -->
+    <div class="system-banner-slot">
+        <span class="badge">🖼️ ESPACIO PARA CAPTURA DE FONDO / ESQUEMA DE SISTEMA</span>
+        <h3>Panel Central de Indexación & OCR</h3>
+        <p style="color:var(--text-muted); max-width:600px; margin: 8px auto 14px; font-size:0.9rem;">
+            Inserta aquí la imagen del software en acción (ej. extracción en vivo de PDF, segmentación de párrafos y detección de metadatos).
+        </p>
+        <span style="font-size:0.8rem; border:1px solid var(--border-glow); padding:5px 12px; border-radius:6px; color:var(--text-accent);">
+            [Espacio de imagen: 1200 x 400px o estilo fondo cover]
+        </span>
+    </div>
+
+    <div class="grid-features">
+        <div class="cards-grid">
+            <div class="card">
+                <span style="font-size:2rem;">📥</span>
+                <h4 style="margin:10px 0 6px;">Ingesta Inteligente</h4>
+                <p style="color:var(--text-muted); font-size:0.9rem;">5,000 folios por minuto con soporte para múltiples codificaciones y formatos rasterizados.</p>
+                <div class="system-mini-slot">📸 [Espacio para captura de barra de carga multi-archivo]</div>
+            </div>
+            <div class="card">
+                <span style="font-size:2rem;">⚡</span>
+                <h4 style="margin:10px 0 6px;">Motor OCR Avanzado</h4>
+                <p style="color:var(--text-muted); font-size:0.9rem;">Visión computacional que reconoce tipografía en fotos sesgadas y documentos históricos.</p>
+                <div class="system-mini-slot">📸 [Espacio para imagen comparativa OCR]</div>
+            </div>
+            <div class="card">
+                <span style="font-size:2rem;">🌐</span>
+                <h4 style="margin:10px 0 6px;">Grafos Interactivos</h4>
+                <p style="color:var(--text-muted); font-size:0.9rem;">Conexión visual de nodos: entidades, contratos, montos y fechas enlazadas automáticamente.</p>
+                <div class="system-mini-slot">📸 [Espacio para captura del grafo semántico de nodos]</div>
+            </div>
+            <div class="card">
+                <span style="font-size:2rem;">🛡️</span>
+                <h4 style="margin:10px 0 6px;">Auditoría Forense</h4>
+                <p style="color:var(--text-muted); font-size:0.9rem;">Bitácora protegida criptográficamente con trazabilidad de cada consulta y descarga.</p>
+                <div class="system-mini-slot">📸 [Espacio para vista de logs de auditoría]</div>
+            </div>
+        </div>
+
+        <!-- MASCOTA 2 PRESERVADA INTACTA -->
+        <div class="mascota-card">
+            <!-- Mascota 2 original intacta -->
+            <img alt="Mascota Libro PLAYER 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJvAHA9yRET7smBiFzwhj3ef9OtB_xD6ncdIh8aFLxadOIDQZSrVU1EU0XnkRMp8x1gjivat32aTgmzjAD6MNjQOw5iUw0iHNlOJZl4iIQjrL4BH2HmCPRBSTR8Z33IRDtYYLf84A6T3cSD8OkeNgtLE5CR9NYzl0_FdTS985JSh1jTt9lCtDGPJYK7a3NcxH166tZYJpPhgsne7RyB5R7PnfjA5HeqhF890aYEhxBc7O-ZUanA8bOww"/>
+            <h4 style="margin-top:14px;">Módulo de Sabiduría</h4>
+            <p style="color:var(--text-muted); font-size:0.88rem; margin:8px 0 16px;">El motor cognitivo indexa cada párrafo con contexto semántico.</p>
+            <div class="system-mini-slot" style="margin-bottom:12px;">[Espacio de imagen o avatar de estado de modelo]</div>
+            <a class="btn btn-outline" href="como-usar.html" style="width:100%; display:block; text-align:center;">Ver Flujo de Trabajo</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

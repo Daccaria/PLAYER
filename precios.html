@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Planes y Precios - PLAYER</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet"/>
+<style>
+    :root {
+        --primary-emerald: #00F5A0;
+        --primary-mint: #00D9F5;
+        --bg-body: #02161E;
+        --bg-surface: #04202B;
+        --bg-card: #082A38;
+        --border-color: #12455A;
+        --border-glow: #00F5A0;
+        --text-main: #E6FFF6;
+        --text-muted: #8AAFB0;
+        --text-accent: #00F5A0;
+        --badge-bg: rgba(0, 245, 160, 0.12);
+        --badge-border: rgba(0, 245, 160, 0.35);
+        --slot-bg: rgba(0, 245, 160, 0.05);
+        --slot-border: rgba(0, 245, 160, 0.3);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter', sans-serif; }
+    body { background: var(--bg-body); color: var(--text-main); }
+    h1, h2, h3, h4 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .navbar { display:flex; justify-content:space-between; align-items:center; padding:1rem 6%; background:var(--bg-surface); border-bottom:1px solid var(--border-color); position:sticky; top:0; z-index:100; }
+    .brand { font-size:1.4rem; font-weight:800; color:var(--text-main); text-decoration:none; display:flex; align-items:center; gap:10px; }
+    .brand-icon { background:linear-gradient(135deg, #00F5A0, #00D9F5); color:#022019; width:36px; height:36px; border-radius:8px; display:inline-flex; align-items:center; justify-content:center; font-weight:900; }
+    .nav-links { display:flex; list-style:none; gap:1.2rem; }
+    .nav-links a { color:var(--text-muted); text-decoration:none; font-weight:600; padding:6px 12px; border-radius:8px; }
+    .nav-links a.active, .nav-links a:hover { color:var(--text-accent); background:var(--badge-bg); }
+    .btn { padding:12px 24px; border-radius:10px; font-weight:700; text-decoration:none; border:none; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; }
+    .btn-cyan { background:linear-gradient(135deg, #00F5A0, #00D9F5); color:#022019; }
+    .btn-outline { border:1.5px solid var(--border-glow); color:var(--text-main); background:transparent; }
+    .container { padding: 4rem 6%; max-width:1200px; margin:0 auto; }
+    .badge { display:inline-block; padding:4px 14px; border-radius:20px; background:var(--badge-bg); border:1px solid var(--badge-border); color:var(--text-accent); font-weight:700; font-size:0.85rem; margin-bottom:1rem; }
+    
+    .system-hero-slot {
+        background: var(--slot-bg);
+        border: 2px dashed var(--slot-border);
+        border-radius: 20px;
+        padding: 30px;
+        text-align: center;
+        margin: 2rem 0 3rem;
+    }
+    
+    .pricing-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap:28px; }
+    .pricing-card { background:var(--bg-card); border:1px solid var(--border-color); border-radius:22px; padding:34px 28px; display:flex; flex-direction:column; justify-content:space-between; position:relative; }
+    .pricing-card.featured { border:2px solid #00F5A0; box-shadow:0 14px 45px rgba(0,245,160,0.25); }
+    .popular-badge { position:absolute; top:-14px; right:28px; background:linear-gradient(135deg,#00F5A0,#00D9F5); color:#022019; font-size:0.8rem; font-weight:800; padding:4px 14px; border-radius:30px; }
+    .pricing-price-wrap { display:flex; align-items:baseline; gap:6px; margin:16px 0 20px; border-bottom:1px solid var(--border-color); padding-bottom:18px; }
+    .price-num { font-size:3rem; font-weight:800; }
+    .features-list { list-style:none; display:flex; flex-direction:column; gap:12px; margin-bottom:28px; font-size:0.92rem; }
+    .slot-card-preview { border:1px dashed var(--slot-border); border-radius:8px; padding:10px; font-size:0.78rem; color:var(--text-muted); margin-bottom:16px; background:var(--slot-bg); text-align:center; }
+</style>
+</head>
+<body>
+<nav class="navbar">
+    <a class="brand" href="index.html"><span class="brand-icon">P</span> PLAYER</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="como-usar.html">¿Cómo se usa?</a></li>
+        <li><a href="caracteristicas.html">Características</a></li>
+        <li><a class="active" href="precios.html">Precios</a></li>
+        <li><a href="seguridad.html">Seguridad</a></li>
+    </ul>
+    <div>
+        <a class="btn btn-outline" href="index.html">Volver al Inicio</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div style="text-align:center; max-width:750px; margin:0 auto 2rem;">
+        <span class="badge">Página de Tarifas • Precios</span>
+        <h1 style="font-size:2.8rem; margin-bottom:1rem;">Planes diseñados para cada escala</h1>
+        <p style="color:var(--text-muted); font-size:1.05rem;">
+            Transparencia absoluta. Sin costos ocultos. Actualiza o cancela tu suscripción cuando lo desees.
+        </p>
+    </div>
+
+    <!-- ESPACIO PARA BANNER O IMAGEN DE FONDO DE PRECIOS/ENTERPRISE -->
+    <div class="system-hero-slot">
+        <span class="badge">🖼️ ESPACIO PARA GRÁFICA / BANNER DE PLANES EMPRESARIALES</span>
+        <h3>Calculadora de ROI y Despliegue On-Premise</h3>
+        <p style="color:var(--text-muted); font-size:0.9rem; max-width:650px; margin:8px auto 14px;">
+            Coloca aquí un banner de fondo o captura del cotizador automático de folios OCR para clientes corporativos.
+        </p>
+        <span style="font-size:0.8rem; color:var(--text-accent); border:1px solid var(--border-glow); padding:4px 12px; border-radius:6px;">
+            [Espacio para imagen de fondo o gráfico ilustrativo]
+        </span>
+    </div>
+
+    <div class="pricing-grid">
+        <!-- Starter -->
+        <div class="pricing-card">
+            <div>
+                <h3>Starter</h3>
+                <p style="color:var(--text-muted); font-size:0.88rem; margin-top:4px;">Para analistas y proyectos independientes.</p>
+                <div class="pricing-price-wrap">
+                    <span style="font-size:1.5rem; font-weight:700;">$</span>
+                    <span class="price-num">29</span>
+                    <span style="color:var(--text-muted);">/ mes</span>
+                </div>
+                <div class="slot-card-preview">📸 [Espacio para captura de plan Starter]</div>
+                <ul class="features-list">
+                    <li>✓ 1,500 páginas OCR / mes</li>
+                    <li>✓ 3 Usuarios concurrentes</li>
+                    <li>✓ Red semántica básica (100 nodos)</li>
+                    <li>✓ Exportación PDF y JSON</li>
+                </ul>
+            </div>
+            <a class="btn btn-outline" href="index.html#contacto" style="width:100%;">Seleccionar Starter</a>
+        </div>
+
+        <!-- Pro -->
+        <div class="pricing-card featured">
+            <span class="popular-badge">Más Popular</span>
+            <div>
+                <h3>Profesional Pro</h3>
+                <p style="color:var(--text-muted); font-size:0.88rem; margin-top:4px;">Para equipos jurídicos y departamentos corporativos.</p>
+                <div class="pricing-price-wrap">
+                    <span style="font-size:1.5rem; font-weight:700;">$</span>
+                    <span class="price-num">79</span>
+                    <span style="color:var(--text-muted);">/ mes</span>
+                </div>
+                <div class="slot-card-preview">📸 [Espacio para captura de panel Pro]</div>
+                <ul class="features-list">
+                    <li>✓ <strong>15,000 páginas OCR</strong> / mes</li>
+                    <li>✓ Hasta 15 Miembros con Roles RBAC</li>
+                    <li>✓ Grafo ilimitado con filtros avanzados</li>
+                    <li>✓ Búsqueda neuronal en lenguaje natural</li>
+                </ul>
+            </div>
+            <a class="btn btn-cyan" href="index.html#contacto" style="width:100%;">Comenzar Prueba Pro</a>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="pricing-card">
+            <div>
+                <h3>Corporativo</h3>
+                <p style="color:var(--text-muted); font-size:0.88rem; margin-top:4px;">Grandes firmas y despliegues en nube privada.</p>
+                <div class="pricing-price-wrap">
+                    <span style="font-size:1.5rem; font-weight:700;">$</span>
+                    <span class="price-num">199</span>
+                    <span style="color:var(--text-muted);">/ mes</span>
+                </div>
+                <div class="slot-card-preview">📸 [Espacio para captura de arquitectura Enterprise]</div>
+                <ul class="features-list">
+                    <li>✓ Volumen ilimitado de páginas</li>
+                    <li>✓ Miembros y roles sin límite</li>
+                    <li>✓ API, Webhooks y SLA 99.9%</li>
+                    <li>✓ Servidor dedicado On-Premise</li>
+                </ul>
+            </div>
+            <a class="btn btn-outline" href="index.html#contacto" style="width:100%;">Contactar a Ventas</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

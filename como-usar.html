@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>¿Cómo se usa? - Guía Paso a Paso PLAYER</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet"/>
+<style>
+    :root {
+        --primary-emerald: #00F5A0;
+        --primary-mint: #00D9F5;
+        --bg-body: #02161E;
+        --bg-surface: #04202B;
+        --bg-card: #082A38;
+        --border-color: #12455A;
+        --border-glow: #00F5A0;
+        --text-main: #E6FFF6;
+        --text-muted: #8AAFB0;
+        --text-accent: #00F5A0;
+        --badge-bg: rgba(0, 245, 160, 0.12);
+        --badge-border: rgba(0, 245, 160, 0.35);
+        --slot-bg: rgba(0, 245, 160, 0.05);
+        --slot-border: rgba(0, 245, 160, 0.3);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter', sans-serif; }
+    body { background: var(--bg-body); color: var(--text-main); }
+    h1, h2, h3, h4 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .navbar { display:flex; justify-content:space-between; align-items:center; padding:1rem 6%; background:var(--bg-surface); border-bottom:1px solid var(--border-color); position:sticky; top:0; z-index:100; }
+    .brand { font-size:1.4rem; font-weight:800; color:var(--text-main); text-decoration:none; display:flex; align-items:center; gap:10px; }
+    .brand-icon { background:linear-gradient(135deg, #00F5A0, #00D9F5); color:#022019; width:36px; height:36px; border-radius:8px; display:inline-flex; align-items:center; justify-content:center; font-weight:900; }
+    .nav-links { display:flex; list-style:none; gap:1.2rem; }
+    .nav-links a { color:var(--text-muted); text-decoration:none; font-weight:600; padding:6px 12px; border-radius:8px; }
+    .nav-links a.active, .nav-links a:hover { color:var(--text-accent); background:var(--badge-bg); }
+    .btn { padding:10px 20px; border-radius:8px; font-weight:700; text-decoration:none; border:none; cursor:pointer; }
+    .btn-cyan { background:linear-gradient(135deg, #00F5A0, #00D9F5); color:#022019; }
+    .btn-outline { border:1.5px solid var(--border-glow); color:var(--text-main); background:transparent; }
+    .container { padding: 4rem 6%; max-width:1200px; margin:0 auto; }
+    .badge { display:inline-block; padding:4px 14px; border-radius:20px; background:var(--badge-bg); border:1px solid var(--badge-border); color:var(--text-accent); font-weight:700; font-size:0.85rem; margin-bottom:1rem; }
+
+    .step-section { display:grid; grid-template-columns: 1fr 1fr; gap:36px; align-items:center; margin-bottom:4rem; padding-bottom:3rem; border-bottom:1px solid var(--border-color); }
+    .step-section:last-child { border-bottom:none; margin-bottom:0; }
+    .step-num { width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg, #00F5A0, #059669); color:#022019; display:flex; align-items:center; justify-content:center; font-size:1.3rem; font-weight:800; margin-bottom:16px; }
+
+    .system-step-slot {
+        background: var(--slot-bg);
+        border: 2px dashed var(--slot-border);
+        border-radius: 18px;
+        min-height: 220px;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:20px;
+        text-align:center;
+        position:relative;
+    }
+    @media(max-width:850px){ .step-section { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<nav class="navbar">
+    <a class="brand" href="index.html"><span class="brand-icon">P</span> PLAYER</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a class="active" href="como-usar.html">¿Cómo se usa?</a></li>
+        <li><a href="caracteristicas.html">Características</a></li>
+        <li><a href="precios.html">Precios</a></li>
+        <li><a href="seguridad.html">Seguridad</a></li>
+    </ul>
+    <div>
+        <a class="btn btn-cyan" href="precios.html">Comenzar Ahora</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div style="text-align:center; max-width:760px; margin:0 auto 3rem;">
+        <span class="badge">Flujo de Trabajo • Página 5</span>
+        <h1 style="font-size:2.8rem; margin-bottom:1rem;">¿Cómo se utiliza la plataforma?</h1>
+        <p style="color:var(--text-muted); font-size:1.05rem;">
+            Acompaña a tu equipo en las 4 fases maestras de procesamiento documental inteligente.
+        </p>
+    </div>
+
+    <!-- PASO 1 -->
+    <div class="step-section">
+        <div>
+            <div class="step-num">1</div>
+            <h2 style="margin-bottom:12px;">Carga e Ingesta Multi-archivo</h2>
+            <p style="color:var(--text-muted); line-height:1.7;">
+                Arrastra PDFs, escaneos o expedientes masivos. El sistema valida la integridad de cada archivo y prepara los lotes para el procesamiento concurrente.
+            </p>
+        </div>
+        <div class="system-step-slot">
+            <span class="badge">📷 ESPACIO PARA CAPTURA: BÓVEDA DE ARRASTRE</span>
+            <p style="color:var(--text-muted); font-size:0.85rem; max-width:320px; margin-top:8px;">
+                Coloca aquí la imagen de la zona drag-and-drop o la interfaz de carga de documentos.
+            </p>
+        </div>
+    </div>
+
+    <!-- PASO 2 -->
+    <div class="step-section">
+        <div>
+            <div class="step-num">2</div>
+            <h2 style="margin-bottom:12px;">Extracción OCR Neuronal</h2>
+            <p style="color:var(--text-muted); line-height:1.7;">
+                Los algoritmos de visión identifican texto, tablas financieras, firmas y sellos, convirtiendo píxeles en datos estructurados y editables.
+            </p>
+        </div>
+        <div class="system-step-slot">
+            <span class="badge">📷 ESPACIO PARA CAPTURA: MOTOR OCR EN PROCESO</span>
+            <p style="color:var(--text-muted); font-size:0.85rem; max-width:320px; margin-top:8px;">
+                Coloca aquí una captura mostrando las cajas delimitadoras (bounding boxes) del texto reconocido.
+            </p>
+        </div>
+    </div>
+
+    <!-- PASO 3 -->
+    <div class="step-section">
+        <div>
+            <div class="step-num">3</div>
+            <h2 style="margin-bottom:12px;">Generación de Red de Conceptos</h2>
+            <p style="color:var(--text-muted); line-height:1.7;">
+                PLAYER crea conexiones semánticas entre documentos independientes, identificando entidades compartidas, cláusulas vinculadas y cronologías.
+            </p>
+        </div>
+        <div class="system-step-slot">
+            <span class="badge">📷 ESPACIO PARA CAPTURA: GRAFO SEMÁNTICO INTERACTIVO</span>
+            <p style="color:var(--text-muted); font-size:0.85rem; max-width:320px; margin-top:8px;">
+                Coloca aquí la interfaz gráfica mostrando los nodos y relaciones del conocimiento documental.
+            </p>
+        </div>
+    </div>
+
+    <!-- PASO 4 -->
+    <div class="step-section">
+        <div>
+            <div class="step-num">4</div>
+            <h2 style="margin-bottom:12px;">Búsqueda & Gobernanza Segura</h2>
+            <p style="color:var(--text-muted); line-height:1.7;">
+                Realiza consultas en lenguaje natural, aplica filtros por nivel de autorización y exporta informes certificados con sellado criptográfico.
+            </p>
+        </div>
+        <div class="system-step-slot">
+            <span class="badge">📷 ESPACIO PARA CAPTURA: CONSOLA DE BÚSQUEDA Y EXPORTACIÓN</span>
+            <p style="color:var(--text-muted); font-size:0.85rem; max-width:320px; margin-top:8px;">
+                Coloca aquí la captura del buscador inteligente y la ventana de descarga de reportes.
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
